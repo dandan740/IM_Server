@@ -1,0 +1,98 @@
+[13:29:42][PluginLoader][WARNING] Plugins directory not found.
+[13:29:42][ProcessManager][WARNING] Failed to read PIDs: pid-list.txt (Systém nemůže nalézt uvedený soubor)
+[13:29:42][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/im-server-config/-/raw/main/test-config-4.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[13:29:42][NATTCore][INFO] Working directory path: C:\Users\Dan\Documents\MEGA\Skola\FAI UTB\Tretak\Vyvoj_sitovych_aplikaci\5_Hodina
+[13:29:42][NATTCore][INFO] Start loading of the configuration file ...
+[13:29:43][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/im-server-config/-/raw/main/test-config-4.yaml?ref_type=heads)
+[13:29:43][NATTCore][INFO] Configuration loading done
+[13:29:43][NATTCore][INFO] Start building test structure according to the configuration ...
+[13:29:43][NATTCore][INFO] Test structure ...
+[13:29:43][NATTCore][INFO] Test structure building done
+[13:29:43][NATTCore][INFO] Start test executing ...
+[13:29:44][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[13:29:44][NATTCore][INFO] Starts execution on the root keyword  ...
+[13:29:44][MessageBuffer][INFO] Message buffer created for module with name: default
+[13:29:44][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app.jar 9999 10
+[13:29:44][ProcessManager][INFO] New PID (11572) added to file
+[13:29:44][WaitKw][INFO] Waiting: 3000 ms
+[13:29:44][ProcessManager][INFO] PID (11572) removed from file
+[13:29:44][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[13:29:44][ExternalProgramRunner][WARNING] (default) Error message from external application: no main manifest attribute, in app\build\libs\app.jar
+
+[13:29:47][MessageBuffer][INFO] Message buffer created for module with name: client-1
+[13:29:47][TelnetClient][WARNING] (client-1) Failed to establish a connection with the host 'localhost' on port '9999'
+[13:29:47][MessageBuffer][INFO] Message buffer created for module with name: client-2
+[13:29:47][TelnetClient][WARNING] (client-2) Failed to establish a connection with the host 'localhost' on port '9999'
+[13:29:47][MessageBuffer][INFO] Message buffer created for module with name: client-3
+[13:29:47][TelnetClient][WARNING] (client-3) Failed to establish a connection with the host 'localhost' on port '9999'
+[13:29:47][WaitKw][INFO] Waiting: 2000 ms
+[13:29:49][WaitKw][INFO] Waiting: 800 ms
+[13:29:49][TestSuiteKw][INFO] Test case 'Zaklaní test komunikace 1' starts executing now
+[13:29:49][WaitKw][INFO] Waiting: 1000 ms
+[13:29:50][AssertEqualsKw][WARNING] Assertion failed. Variable 'client-2-last-msg' not found!
+[13:29:50][AssertEqualsKw][WARNING] Assertion failed. Variable 'client-3-last-msg' not found!
+[13:29:50][TestSuiteKw][ERROR] Test suite 'Testování běžné komunikace' - Test case 'Zaklaní test komunikace 1' failed
+[13:29:51][MessageBuffer][INFO] Message buffer cleared
+[13:29:51][TestSuiteKw][INFO] Test case 'Zaklaní test komunikace 2' starts executing now
+[13:29:51][WaitKw][INFO] Waiting: 1000 ms
+[13:29:52][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[13:29:52][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must equals expected text '[Klient2] >> 12345 - 67890')
+[13:29:52][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[13:29:52][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must contains expected text '[Klient3] >> This is a test message')
+[13:29:52][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[13:29:52][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must contains expected text '[Klient1] >> Testing 123')
+[13:29:52][TestSuiteKw][ERROR] Test suite 'Testování běžné komunikace' - Test case 'Zaklaní test komunikace 2' failed
+[13:29:52][MessageBuffer][INFO] Message buffer cleared
+[13:29:53][TestSuiteKw][INFO] Test case 'Test odeslání soukromé zprávy' starts executing now
+[13:29:53][WaitKw][INFO] Waiting: 1000 ms
+[13:29:54][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[13:29:54][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: 
+[13:29:54][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must contains expected text '[Klient2] >> This is a private message')
+[13:29:54][TestSuiteKw][ERROR] Test suite 'Testování běžné komunikace' - Test case 'Test odeslání soukromé zprávy' failed
+[13:29:54][MessageBuffer][INFO] Message buffer cleared
+[13:29:55][MessageBuffer][INFO] Message buffer cleared
+[13:29:55][TestSuiteKw][INFO] Test case 'Test vstoupení do diskuzní místnosti' starts executing now
+[13:29:55][WaitKw][INFO] Waiting: 1000 ms
+[13:29:56][WaitKw][INFO] Waiting: 1000 ms
+[13:29:57][AssertEqualsKw][WARNING] Assertion failed. Variable 'client-1-last-msg' not found!
+[13:29:57][WaitKw][INFO] Waiting: 1000 ms
+[13:29:58][WaitKw][INFO] Waiting: 1000 ms
+[13:29:59][AssertEqualsKw][WARNING] Assertion failed. Variable 'client-1-last-msg' not found!
+[13:29:59][TestSuiteKw][ERROR] Test suite 'Testování diskuzních místností' - Test case 'Test vstoupení do diskuzní místnosti' failed
+[13:29:59][MessageBuffer][INFO] Message buffer cleared
+[13:29:59][TestSuiteKw][INFO] Test case 'Test komunikace v diskuzní místnosti' starts executing now
+[13:29:59][WaitKw][INFO] Waiting: 1000 ms
+[13:30:00][AssertEqualsKw][WARNING] Assertion failed. Variable 'client-2-last-msg' not found!
+[13:30:00][AssertEqualsKw][WARNING] Assertion failed. Variable 'client-3-last-msg' not found!
+[13:30:00][WaitKw][INFO] Waiting: 1000 ms
+[13:30:01][WaitKw][INFO] Waiting: 1000 ms
+[13:30:02][AssertEqualsKw][WARNING] Assertion failed. Variable 'client-3-last-msg' not found!
+[13:30:02][TestSuiteKw][ERROR] Test suite 'Testování diskuzních místností' - Test case 'Test komunikace v diskuzní místnosti' failed
+[13:30:02][MessageBuffer][INFO] Message buffer cleared
+[13:30:03][MessageBuffer][INFO] Message buffer cleared
+[13:30:03][TestSuiteKw][INFO] Test case 'Test změny jména' starts executing now
+[13:30:03][WaitKw][INFO] Waiting: 1000 ms
+[13:30:04][WaitKw][INFO] Waiting: 1000 ms
+[13:30:05][AssertEqualsKw][WARNING] Assertion failed. Variable 'client-2-last-msg' not found!
+[13:30:05][TestSuiteKw][ERROR] Test suite 'Testování příkazu pro změnů jména' - Test case 'Test změny jména' failed
+[13:30:05][MessageBuffer][INFO] Message buffer cleared
+[13:30:06][TestSuiteKw][INFO] Test case 'Test změny na neunikátní jméno' starts executing now
+[13:30:06][WaitKw][INFO] Waiting: 1000 ms
+[13:30:07][WaitKw][INFO] Waiting: 1000 ms
+[13:30:08][AssertEqualsKw][WARNING] Assertion failed. Variable 'client-2-last-msg' not found!
+[13:30:08][TestSuiteKw][ERROR] Test suite 'Testování příkazu pro změnů jména' - Test case 'Test změny na neunikátní jméno' failed
+[13:30:08][MessageBuffer][INFO] Message buffer cleared
+[13:30:09][MessageBuffer][INFO] Message buffer cleared
+[13:30:09][MessageBuffer][INFO] Message buffer cleared
+[13:30:09][TelnetClient][INFO] (client-1) Telnet client [client-1] terminated
+[13:30:09][TelnetClient][INFO] (client-2) Telnet client [client-2] terminated
+[13:30:09][TelnetClient][INFO] (client-3) Telnet client [client-3] terminated
+[13:30:09][NATTCore][INFO] Test executing finished
+[13:30:09][NATTCore][INFO] Start generating test report
+[13:30:09][TestReportGenerator][INFO] Report saved to file
+[13:30:09][NATTCore][WARNING] Failed test cases: "Test root initialization", "Zaklaní test komunikace 1", "Zaklaní test komunikace 2", "Test odeslání soukromé zprávy", "Test vstoupení do diskuzní místnosti", "Test komunikace v diskuzní místnosti", "Test změny jména", "Test změny na neunikátní jméno"
+[13:30:09][NATTCore][INFO] Final score: 0,000000
+[13:30:09][NATTCore][ERROR] Testing done. Leaving status: FAILED
